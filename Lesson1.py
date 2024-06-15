@@ -4,6 +4,7 @@ import numpy as np
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
+
 # Initialization of tensors
 x= tf.constant(4, shape =(1,1,), dtype = tf.float32)
 x= tf.constant([[1,2,3], [4,5,6]])
@@ -19,17 +20,27 @@ x= tf.cast(x, dtype = tf.float64)
 
 
 
+#Mathematical Operations
 x= tf.constant((1,2,3))
 y = tf.constant((3,4,5))
 z = y + x  #  or z =tf.constant(y + x)  or z = tf.add(x,y)
 
-z= tf.constant(y-x)
+z= tf.constant(y-x) 
+z = tf.subtract(y,x)
+z=y-x
+# SAME CAN BE DONE FOR DIVISION AND MULTIPLICATION
+
+z = tf.tensordot(x,y, axes =1)
+z = tf.reduce_sum(x*y, axis =0)
+
+z = x **5
+
+x= tf.random.normal((2,3))
+y= tf.random.normal((3,4))
+z = tf.matmul(x,y) 
+print(x)
 
 
-print(z)
-
-
-#Mathematical Operations
 
 
 # Indexing
