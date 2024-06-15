@@ -35,13 +35,18 @@ z = tf.reduce_sum(x*y, axis =0)
 
 z = x **5
 
-x= tf.random.normal((2,3))
-y= tf.random.normal((3,4))
-z = tf.matmul(x,y) 
-print(x)
-
-
+#x= tf.random.normal((2,3))
+#y= tf.random.normal((3,4))
+#z = tf.matmul(x,y) 
 
 
 # Indexing
+x = tf.constant(range(1,10))
+y = x[1:]
+z = x[1:3]
+w = x[::2]
+p = x[::-1]
+
+
+print(p)
 
